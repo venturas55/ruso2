@@ -1,7 +1,23 @@
 <?php 
 session_start();
 include './src/funciones.php';
+
+// Debug: Show environment variables
+echo "<pre>";
+echo "Environment Variables:\n";
+echo "DB_HOST: " . ($_ENV['DB_HOST'] ?? 'NOT SET') . "\n";
+echo "DB_USER: " . ($_ENV['DB_USER'] ?? 'NOT SET') . "\n";
+echo "DB_PASS: " . ($_ENV['DB_PASS'] ?? 'NOT SET') . "\n";
+echo "DB_NAME: " . ($_ENV['DB_NAME'] ?? 'NOT SET') . "\n";
+echo "</pre>";
+
 $db = conectaDb();
+if (!$db) {
+    echo "<p style='color: red;'>Database connection failed!</p>";
+    exit();
+} else {
+    echo "<p style='color: green;'>Database connection successful!</p>";
+}
 
 //Variables que toman valor de lo enviado desde el form 
 $email = strtolower(recoge('email'));
