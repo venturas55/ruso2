@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <link rel="stylesheet" style="text/css" href="css/estilo.css">
+
+</head>
+
+<body>
+      <header>
+            <h1 class="headtype">Formulario de alta nuevo usuario<h1>
+                        <!--    <img class="" src=""
+                              width="120" height="100">
+                              <a class="navbar-brand" target="_blank" href=""><img
+                                    src="" /></a> -->
+      </header>
+      <div id="formulario_registro">
+            <form method="post" class="signin" action="./registro.php">
+                  <fieldset class="textbox">
+                        <label class="email">
+                              <span>Email</span>
+                              <input id="email" name="email" value="" type="text" autocomplete="on"
+                                    placeholder="Usuario" required>
+                        </label>
+                        <label class="username">
+                              <span>Nombre</span>
+                              <input id="usuario" name="usuario" value="" type="text" autocomplete="on"
+                                    placeholder="Usuario" required>
+                        </label>
+                        <label class="password">
+                              <span>Contrase&ntilde;a</span>
+                              <input id="password" name="password" value="" type="password"
+                                    placeholder="Contrase&ntilde;a" required>
+                        </label>
+                        <input type="submit" id="go" value="Enviar">
+                        <input type="button" id="cancel" value="Cancel" onClick="window.location.href='./index.php'">
+
+                  </fieldset>
+            </form>
+      </div>
+</body>
+
+</html>

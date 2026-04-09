@@ -1,0 +1,4 @@
+DB_HOST=host.mysql.db
+DB_USER=user
+DB_PASS=passs
+DB_NAME=dbname
